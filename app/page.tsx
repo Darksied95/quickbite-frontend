@@ -1,65 +1,108 @@
+import { Button } from "@/shared/components/Button";
+import IconWrapper from "@/shared/components/IconWrapper";
+import { Logo } from "@/shared/components/Logo";
+import { Clock, Scale, Clipboard, Check, DollarSign } from "lucide-react";
 import Image from "next/image";
 
 export default function Home() {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
+
+    <div className="text-gray-500">
+      <header className="flex px-3 justify-between py-2 mb-10 max-w-7xl mx-auto mt-5">
+        <Logo />
+
+        <nav>
+          <Button className="mr-5">Login</Button>
+          <Button variant="secondary"> Sign Up</Button>
+        </nav>
+      </header>
+
+      <main>
+        <div className="lg:flex gap-10 lg:ml-20">
+          <div className="md:flex items-center justify-center flex-col max-w-130 mx-auto mb-4 md:mb-10 ">
+            <h1 className="text-3xl font-bold md:font-extrabold px-4 text-black md:text-5xl lg:text-6xl text-center lg:text-left">Food delivery<br /> <span className="text-brand-primary">in minutes</span></h1>
+
+            <p className="px-4 mt-4 text-lg md:text-center">Order from your favourite local restaurants with the quickes delivery times. QuickBite brings the best food right to your door.</p>
+          </div>
+
+          <Image
+            src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+            alt="Assorted fresh food dishes on a table"
+            width={1000}
+            height={450}
+            className="mb-10 lg:h-full object-cover hero-diagonal"
+          />
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
+
+        {/* FEATURES */}
+
+        <section className="px-4 mb-10">
+
+          <div className="lg:text-center">
+            <h2 className="text-brand-primary font-bold uppercase">Features</h2>
+            <h3 className="text-2xl font-bold text-black md:text-3xl mt-2">A better way to order food</h3>
+
+            <p className="md:mt-4 text-xl max-w-2xl lg:mx-auto">QuickBite offers a seamless food delivery experience for customers , restaurants, and drivers.</p>
+
+          </div>
+
+          {/* LIST  */}
+
+          <ul className="px-4 grid gap-14 grid-cols-(--grid-cols-auto-fit-200) max-w-7xl mx-auto lg:px-0 my-7">
+            <li>
+              <IconWrapper Icon={Clock} className="my-7" />
+              <h4 className="font-semibold text-black text-lg" >Fast Delivery</h4>
+              <p>Get your food delivered quickly with our optimized routing system and dedicated drivers.</p>
+            </li>
+
+            <li>
+              <IconWrapper Icon={Scale} className="my-7" />
+              <h4 className="font-semibold text-black text-lg" >Local Restaurants</h4>
+              <p>Support local businesses by ordering from your favourite neighborhood restaurants.</p>
+            </li>
+
+            <li>
+              <IconWrapper Icon={DollarSign} className="my-7" />
+              <h4 className="font-semibold text-black text-lg" >Best Prices</h4>
+              <p>Competitive pricing with no hidden fees.</p>
+            </li>
+
+            <li>
+              <IconWrapper Icon={Clipboard} className="my-7" />
+              <h4 className="font-semibold text-black text-lg" >Real-time Tracking</h4>
+              <p>Know exactly where your order is with our real-time delivery tracking system.</p>
+            </li>
+          </ul>
+        </section>
+
+        {/* START ORDERING */}
+
+        <section className="px-4 bg-brand-primary/5 py-10">
+
+          <div className="max-w-7xl mx-auto lg:flex items-center justify-between">
+            <h2 className="text-3xl font-bold md:font-extrabold text-black mb-4">Ready to try QuickBite? <br /> <span className="text-brand-primary">Start ordering  today.</span></h2>
+            <Button variant="secondary" size="md" aria-label="Start ordering food on QuickBite" className="h-10">Get started</Button>
+          </div>
+        </section>
+
+
       </main>
+
+      <footer className="px-5 mt-10 mb-10">
+        <ul className="flex gap-x-12  gap-y-3 flex-wrap justify-center">
+          <li>About</li>
+          <li>Blog</li>
+          <li>Jobs</li>
+          <li>Press</li>
+          <li>Partners</li>
+          <li>Privacy</li>
+          <li>Terms</li>
+        </ul>
+
+        <p className="my-5 text-center text-gray-400">
+          © 2026  QuickBite, Inc. All rights reserved.
+        </p>
+      </footer>
     </div>
   );
 }

@@ -1,0 +1,15 @@
+@import "tailwindcss";
+
+@theme {
+  --color-brand-primary: #16a34a;
+  --color-brand-secondary: #22C55E;
+  --grid-cols-auto-fit-200: repeat(auto-fit, minmax(200px, 1fr))
+}
+
+@layer components {
+  .hero-diagonal {
+    @media (min-width:1028px) {
+      clip-path: polygon(20% 0, 100% 0, 100% 100%, 0 100%);
+    }
+  }
+}
