@@ -1,4 +1,4 @@
-import { Button } from "@/shared/components/Button";
+import { Action } from "@/shared/components/Action";
 import IconWrapper from "@/shared/components/IconWrapper";
 import { Logo } from "@/shared/components/Logo";
 import { Clock, Scale, Clipboard, Check, DollarSign } from "lucide-react";
@@ -6,14 +6,13 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-
     <div className="text-gray-500">
       <header className="flex px-3 justify-between py-2 mb-10 max-w-7xl mx-auto mt-5">
         <Logo />
 
         <nav>
-          <Button className="mr-5">Login</Button>
-          <Button variant="secondary"> Sign Up</Button>
+          <Action as="link" href="/login" className="mr-5">Login</Action>
+          <Action as="link" href="/register" variant="secondary"> Sign Up</Action>
         </nav>
       </header>
 
@@ -81,7 +80,7 @@ export default function Home() {
 
           <div className="max-w-7xl mx-auto lg:flex items-center justify-between">
             <h2 className="text-3xl font-bold md:font-extrabold text-black mb-4">Ready to try QuickBite? <br /> <span className="text-brand-primary">Start ordering  today.</span></h2>
-            <Button variant="secondary" size="md" aria-label="Start ordering food on QuickBite" className="h-10">Get started</Button>
+            <Action as="link" href="/register" variant="secondary" size="md" aria-label="Start ordering food on QuickBite" className="h-10">Get started</Action>
           </div>
         </section>
 
