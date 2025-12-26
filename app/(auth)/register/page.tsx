@@ -3,7 +3,7 @@ import { RegisterDriverForm } from "@/features/auth/components/RegisterDriverFor
 import { RegisterRestaurantWithOwnerForm } from "@/features/auth/components/RegisterRestaurantWithOwnerForm"
 import RegistrationCard from "@/features/auth/components/RegistrationCard"
 import { Logo } from "@/shared/components/Logo"
-import { Car, Home, User, Utensils } from "lucide-react"
+import { Car, Home, Utensils } from "lucide-react"
 
 const Page = async ({ searchParams }: { searchParams: Promise<{ role: string | undefined }> }) => {
     const role = (await searchParams).role

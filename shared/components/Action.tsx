@@ -28,7 +28,7 @@ export const Action: React.FC<ActionProps> = (props) => {
         {
             "bg-white text-black border border-black/10": variant === "primary",
             "bg-brand-primary text-white hover:bg-green-700": variant === "secondary",
-            "h-7.5": size === "sm",
+            "h-9": size === "sm",
             "h-12.5": size === "md",
         },
         className

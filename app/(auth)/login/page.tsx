@@ -1,22 +1,16 @@
-"use client"
-import { useForm } from "react-hook-form"
+import { LoginForm } from "@/features/auth/components/LoginForm"
+import { Logo } from "@/shared/components/Logo"
 
-type Inputs = {
-    email: string
-    password: string
-}
 const page = () => {
-    const { register, handleSubmit, watch, formState: { errors } } = useForm<Inputs>()
-    return (
-        <section>
-            <h1>Sign in to QuickBite</h1>
 
-            <form>
-                <input {...register("email")} type="email" placeholder="Email" />
-                <input {...register("password")} type="password" placeholder="Password" />
-                <button type="submit">Sign in</button>
-            </form>
-        </section>
+    return (
+        <div className=" min-h-screen py-px px-4 flex flex-col  justify-center">
+            <div className=" flex flex-col items-center justify-center mt-14 mb-5">
+                <Logo size="lg" className="mb-4" />
+                <h1 className="text-3xl font-bold mb-3">Sign in to your account</h1>
+            </div>
+            <LoginForm />
+        </div>
     )
 }
 
