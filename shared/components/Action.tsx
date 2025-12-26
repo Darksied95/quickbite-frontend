@@ -10,6 +10,7 @@ interface BaseProps {
 }
 type ButtonProps = {
     as: 'button'
+    loading?: boolean
 } & ButtonHTMLAttributes<HTMLButtonElement>
 
 type LinkProps = {
@@ -42,11 +43,21 @@ export const Action: React.FC<ActionProps> = (props) => {
             </Link>
         )
     }
-    const { type = "button", ...rest } = props
+    const { type = "button", loading, ...rest } = props
 
     return (
-        <button type={type} {...rest} className={classes} >
-            {children}
+        <button
+            type={type}
+            {...rest}
+            className={classes}
+        >
+            {loading
+                ? <span className={cn("mr-2 h-4 w-4 animate-spin rounded-full border-b-2", {
+                    " border-white": variant === "secondary",
+                    " border-brand-primary": variant === "primary",
+                })} />
+                : children
+            }
         </button>
     )
 }

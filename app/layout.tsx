@@ -1,21 +1,14 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, Inter } from "next/font/google";
+import { Inter } from "next/font/google";
 import "../shared/globals.css";
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+import { QueryProvider } from "@/shared/providers/QueryProvider";
+import { ToastContainer } from "react-toastify";
 
 const inter = Inter({
   variable: "--font-inter",
   subsets: ["latin"],
 });
+
 
 export const metadata: Metadata = {
   title: "QuickBite",
@@ -32,7 +25,8 @@ export default function RootLayout({
       <body
         className={`${inter.variable}  antialiased`}
       >
-        {children}
+        <ToastContainer />
+        <QueryProvider>{children}</QueryProvider>
       </body>
     </html>
   );
