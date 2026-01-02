@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import "../shared/globals.css";
 import { QueryProvider } from "@/shared/providers/QueryProvider";
 import { ToastContainer } from "react-toastify";
+import { TopMenu } from "@/shared/components/TopMenu";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -23,9 +24,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${inter.variable}  antialiased`}
+        className={`${inter.variable}  antialiased bg-gray-100`}
       >
         <ToastContainer />
+        <TopMenu name="Rajah" />
         <QueryProvider>{children}</QueryProvider>
       </body>
     </html>
