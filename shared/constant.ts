@@ -1,0 +1,1 @@
+export const validStatuses = ["received", "preparing", "ready for pickup", "out for delivery", "cancelled", "delivered"] as const

@@ -6,3 +6,5 @@ export type SideMenuLink = {
     icon: IconName
 }
 
+
+export type ValidStatus = "received" | "preparing" | "ready for pickup" | "out for delivery" | "cancelled" | "delivered"
