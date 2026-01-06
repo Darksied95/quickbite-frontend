@@ -1,12 +1,14 @@
 "use client"
 import { useState } from "react"
 import { CustomerFeedbackDialog } from "./feedback/CustomerFeedbackDialog"
+import { OperatingHoursDialog } from "./operatingHours/OperatingHoursDialog"
 
 export const QuickActions = () => {
     const [openedAction, setOpenedAction] = useState<"menu" | "offers" | "feedback" | "hours" | null>(null)
     return (
         <>
             <CustomerFeedbackDialog isOpen={openedAction === "feedback"} onClose={() => setOpenedAction(null)} />
+            <OperatingHoursDialog isOpen={openedAction === "hours"} onClose={() => setOpenedAction(null)} />
             <div className="bg-white px-4 py-2 mt-4">
                 <h3 className="font-medium my-3">Quick Actions</h3>
                 <div role="group" aria-labelledby="quick-actions" className="grid gap-x-2 gap-y-2 mt-2">
@@ -19,7 +21,10 @@ export const QuickActions = () => {
                         Set Special Offers
                     </button>
 
-                    <button className="bg-yellow-600 text-white py-2 rounded-sm font-medium text-sm capitalize">
+                    <button
+                        className="bg-yellow-600 text-white py-2 rounded-sm font-medium text-sm capitalize cursor-pointer"
+                        onClick={() => setOpenedAction("hours")}
+                    >
                         Adjust Operating Hours
                     </button>
 
