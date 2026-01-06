@@ -1,6 +1,6 @@
 import { Action } from "@/shared/components/Action"
 import { cn } from "@/shared/lib/utils"
-import { StatusTag } from "./StatusTag"
+import { StatusTag } from "../StatusTag"
 import { type ValidStatus } from "@/shared/types"
 import { validStatuses } from "@/shared/constant"
 

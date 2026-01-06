@@ -5,7 +5,7 @@ import { StatusTag } from '../StatusTag'
 import { formatDistanceToNow } from 'date-fns'
 import { Action } from '@/shared/components/Action'
 import { ValidStatus } from '@/shared/types'
-import { RestaurantOrderCardDialog } from '../RestaurantOrderCardDialog'
+import { RestaurantOrderCardDialog } from '../orderCard/RestaurantOrderCardDialog'
 
 type Props = {
     orderId: string

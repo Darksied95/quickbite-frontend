@@ -8,7 +8,7 @@ export const RestaurantOrderCardDialog = ({ isOpen, onClose }: { isOpen: boolean
             <DialogContent showCloseButton={false} className='p-0'>
                 <DialogTitle className='border-b border-gray-300 p-4 flex items-center justify-between'>
                     Order ORD-1235
-                    <button className='text-gray-500' onClick={onClose}>
+                    <button className='text-gray-500 cursor-pointer' onClick={onClose}>
                         <XIcon size={20} />
                     </button>
                 </DialogTitle>

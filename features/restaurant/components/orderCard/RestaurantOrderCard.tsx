@@ -3,7 +3,7 @@ import { Action } from "@/shared/components/Action"
 import { formatDistanceToNow } from "date-fns"
 import { RestaurantOrderCardDialog } from "./RestaurantOrderCardDialog"
 import { useState } from "react"
-import { StatusTag } from "./StatusTag"
+import { StatusTag } from "../StatusTag"
 import { ValidStatus } from "@/shared/types"
 
 type Props = {
