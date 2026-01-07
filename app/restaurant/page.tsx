@@ -1,5 +1,5 @@
 import { QuickActions } from "@/features/restaurant/components/QuickActions"
-import { RestaurantOrderCardList } from "@/features/restaurant/components/orderCard/RestaurantOrderCardList"
+import { RestaurantOrderCardList } from "@/features/restaurant/components/orderCard/ActiveOrderCardList"
 import { RestaurantSummary } from "@/features/restaurant/components/RestaurantSummary"
 import { Table } from "@/features/restaurant/components/table/Table"
 
