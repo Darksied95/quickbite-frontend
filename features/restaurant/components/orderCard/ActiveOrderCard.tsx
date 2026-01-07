@@ -1,7 +1,7 @@
 "use client"
 import { Action } from "@/shared/components/Action"
 import { formatDistanceToNow } from "date-fns"
-import { RestaurantOrderCardDialog } from "./RestaurantOrderCardDialog"
+import { RestaurantOrderCardDialog } from "./ActiveOrderCardDialog"
 import { useState } from "react"
 import { StatusTag } from "../StatusTag"
 import { ValidStatus } from "@/shared/types"

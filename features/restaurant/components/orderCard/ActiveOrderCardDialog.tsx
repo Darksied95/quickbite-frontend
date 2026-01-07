@@ -1,5 +1,5 @@
 import { Dialog, DialogContent, DialogTitle } from '@/shared/components/ui/dialog'
-import { RestaurantOrderCardDetails } from './RestaurantOrderCardDetails'
+import { RestaurantOrderCardDetails } from './ActiveOrderCardDetails'
 import { XIcon } from 'lucide-react'
 
 export const RestaurantOrderCardDialog = ({ isOpen, onClose }: { isOpen: boolean, onClose: () => void }) => {

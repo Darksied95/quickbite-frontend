@@ -1,5 +1,5 @@
 import { ValidStatus } from "@/shared/types"
-import { RestaurantOrderCard } from "./RestaurantOrderCard"
+import { RestaurantOrderCard } from "./ActiveOrderCard"
 
 type Props = {
     orderItems: Array<{
