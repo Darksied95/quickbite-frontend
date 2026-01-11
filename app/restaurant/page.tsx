@@ -31,7 +31,6 @@ const page = () => {
             </div>
             <RestaurantSummary />
             <QuickActions />
-
         </div>
     )
 }
