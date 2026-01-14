@@ -1,4 +1,3 @@
-import { OrderCard } from "@/features/restaurant/components/orderCard/OrderCard"
 import { OrderCardList } from "@/features/restaurant/components/orderCard/OrderCardList"
 import { cn } from "@/shared/lib/utils"
 import Link from "next/link"
