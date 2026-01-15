@@ -6,7 +6,7 @@ const page = async ({ searchParams }: PageProps<"/restaurant/orders">) => {
     const status = (await searchParams).status || "active" as string
 
     return (
-        <div>
+        <div className="my-5 mx-5 lg">
             <h2 className="text-xl font-semibold mb-3">Orders</h2>
             <nav className="space-x-6 overflow-x-auto whitespace-nowrap pb-2 px-2">
                 <Link
