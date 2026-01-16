@@ -1,4 +1,4 @@
-import { Navigations } from "@/features/restaurant/components/settings/Navigations"
+import { Navigations } from "@/features/restaurant/components/Navigations"
 
 const page = () => {
     return (

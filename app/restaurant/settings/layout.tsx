@@ -1,4 +1,4 @@
-import { Navigations } from '@/features/restaurant/components/settings/Navigations'
+import { Navigations } from '@/features/restaurant/components/Navigations'
 import React from 'react'
 
 const SettingsLayout = ({ children }: { children: React.ReactNode }) => {

@@ -1,4 +1,4 @@
-import { UpdateProfileForm } from "@/features/restaurant/components/settings/UpdateProfileForm"
+import { UpdateProfileForm } from "@/features/restaurant/components/UpdateProfileForm"
 
 const page = () => {
     return (

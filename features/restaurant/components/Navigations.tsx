@@ -41,18 +41,19 @@ const LINKS = [
 
 export const SmallScreenNavigations = ({ pathname }: { pathname: string }) => {
     const [isOpen, setIsOpen] = useState(false)
+    const currentLink = LINKS.find(link => link.href === pathname) || LINKS[0]
     return (
         <nav className='relative md:hidden'>
             <button
                 className='flex items-center justify-between w-full bg-gray-200 py-2 rounded-md px-2 cursor-pointer'
                 onClick={() => setIsOpen(!isOpen)}
             >
-                Restaurant Profile
+                {currentLink.name}
                 <ChevronDown className={cn('transition-transform duration-300 transform rotate-180', isOpen ? 'rotate-180' : 'rotate-0')} />
             </button>
 
             {
-                isOpen && <ul className='absolute top-12 bg-white w-full px-4 py-3 rounded-md shadow-md'>
+                isOpen && <ul className='absolute top-12 bg-white w-full px-4 py-3 rounded-md shadow-md z-10'>
                     {
                         LINKS.map((link, index) => (
                             <li key={index}>

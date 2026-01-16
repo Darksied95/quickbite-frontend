@@ -2,6 +2,7 @@
 import { useState } from "react";
 import { OperatingHours } from "./OperatingHours";
 import { Action } from "@/shared/components/Action";
+import { cn } from "@/shared/lib/utils";
 
 export type DaySchedule = {
     open: string
@@ -19,7 +20,7 @@ export type WeekSchedule = {
     sunday: DaySchedule
 }
 
-export const OperatingHoursList = ({ onClose }: { onClose: () => void }) => {
+export const OperatingHoursList = ({ onClose, className }: { onClose?: () => void, className?: string }) => {
     const [operatingHours, setOperatingHours] = useState<WeekSchedule>({
         monday: {
             open: "09:00",
@@ -71,7 +72,7 @@ export const OperatingHoursList = ({ onClose }: { onClose: () => void }) => {
     }
 
     return (
-        <div className="px-4">
+        <div className={cn('px-3', className)}>
             {
                 Object.entries(operatingHours).map(([day, operatingHour], index) => (
                     <OperatingHours
@@ -81,11 +82,10 @@ export const OperatingHoursList = ({ onClose }: { onClose: () => void }) => {
                         close={operatingHour.close}
                         closed={operatingHour.closed}
                         onChange={handleOperatingHoursChange}
-                        onClose={onClose}
                     />
                 ))
             }
-            <Action as="button" onClick={onClose} variant="secondary" size="sm" className="block ml-auto my-5">Save Changes</Action>
+            {onClose && <Action as="button" onClick={onClose} variant="secondary" size="sm" className="block ml-auto my-5">Save Changes</Action>}
         </div>
     )
 }

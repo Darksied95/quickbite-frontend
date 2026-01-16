@@ -6,9 +6,8 @@ type Props = {
     close: string
     closed: boolean
     onChange: (day: keyof WeekSchedule, updates: Partial<DaySchedule>) => void
-    onClose: () => void
 }
-export const OperatingHours: React.FC<Props> = ({ day, open, close, closed, onChange, onClose }) => {
+export const OperatingHours: React.FC<Props> = ({ day, open, close, closed, onChange }) => {
     return (
         <div className="grid grid-cols-2 mb-3">
             <p className="text-sm font-medium">{day[0].toUpperCase() + day.slice(1)}</p>

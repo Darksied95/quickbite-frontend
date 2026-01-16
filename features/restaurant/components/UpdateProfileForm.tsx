@@ -4,7 +4,7 @@ import Image from "next/image"
 import { Action } from "@/shared/components/Action"
 import { zodResolver } from "@hookform/resolvers/zod"
 import { useForm } from "react-hook-form"
-import { editProfileValidationSchema } from "../../validations/edit-profile.validation"
+import { editProfileValidationSchema } from "../validations/edit-profile.validation"
 
 export const UpdateProfileForm = () => {
     const { register, handleSubmit } = useForm({
