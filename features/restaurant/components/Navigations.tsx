@@ -17,16 +17,6 @@ const LINKS = [
         Icon: MapPin
     },
     {
-        name: "Delivery Settings",
-        href: '/restaurant/settings/delivery',
-        Icon: Truck
-    },
-    {
-        name: "Payment Methods",
-        href: '/restaurant/settings/payment',
-        Icon: CreditCard
-    },
-    {
         name: "Notifications",
         href: '/restaurant/settings/notifications',
         Icon: Bell
