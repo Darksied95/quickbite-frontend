@@ -7,4 +7,4 @@ export type SideMenuLink = {
 }
 
 
-export type ValidStatus = "received" | "preparing" | "ready for pickup" | "out for delivery" | "cancelled" | "delivered"
+export type ValidStatus = "received" | "preparing" | "ready for pickup" | "out for delivery" | "cancelled" | "delivered" | "picked up"

@@ -28,7 +28,11 @@ export default function RootLayout({
       >
         <ToastContainer />
         <TopMenu name="Rajah" />
-        <QueryProvider>{children}</QueryProvider>
+        <QueryProvider>
+          <main className="px-5">
+            {children}
+          </main>
+        </QueryProvider>
       </body>
     </html>
   );
