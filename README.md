@@ -1,36 +1,114 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Quick Bite
 
-## Getting Started
+Quick Bite is a modern frontend for a restaurant management system.  
+It serves as a technical deep-dive into the Next.js App Router and the paradigm shift introduced by React Server Components (RSC).
 
-First, run the development server:
+---
+
+## Project Intent
+
+The primary goal of Quick Bite is to master the boundary between server and client rendering in modern React.
+
+The project interfaces with an external NestJS backend, acting as a laboratory for:
+
+- Optimizing initial page loads by shifting data fetching to the server
+
+---
+
+## Tech Stack
+
+**Frontend**
+- Next.js (App Router)
+- TypeScript
+- Tailwind CSS
+- shadcn/ui
+- pnpm
+
+**Backend**
+- NestJS (External API)
+
+---
+
+## Architecture & Evolution
+
+### Current Architecture
+
+Quick Bite currently operates as a decoupled frontend, communicating with a separate NestJS service.
+
+### Current Strategy
+
+- **Server-Side Fetching**
+  - Next.js Server Components fetch data directly from the NestJS API
+  - Eliminates CORS issues
+
+---
+
+## 🚧 Future Roadmap
+
+- **Monorepo Migration**
+  - Merge frontend and backend into a single workspace
+  - Enable shared types and improved developer experience
+
+- **Containerization**
+  - Use Docker and docker-compose to orchestrate:
+    - Next.js frontend
+    - NestJS backend
+    - Database
+  - Run the entire system as a single unit
+
+---
+
+## 🚀 Getting Started
+
+### Prerequisites
+
+- Node.js (Latest LTS)
+- pnpm  
+  ```bash
+  npm install -g pnpm
+  ```
+
+### Backend Requirement
+
+- Quick Bite NestJS backend running locally or remotely
+
+## 📦 Installation
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+pnpm install
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Development
+```bash
+pnpm dev
+```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Production
+```bash
+pnpm build
+pnpm start
+```
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🧠 Learning Objectives
 
-## Learn More
+### RSC Optimization
+- Eliminate client-side `useEffect` and `TansStack query` data fetching
+- Prefer async **Server Components**
 
-To learn more about Next.js, take a look at the following resources:
+### Payload Reduction
+- Minimize client-side JavaScript bundles
+- Offload logic to the server whenever possible
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Selective Interactivity
+- Use `'use client'` only for interactive UI leaves
+- Examples:
+  - Cart toggles
+  - Form inputs
+  - Client-only UI state
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 📌 Philosophy
 
-## Deploy on Vercel
+> Default to the server. Escape to the client only when necessary.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
