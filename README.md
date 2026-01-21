@@ -93,7 +93,7 @@ pnpm start
 ## 🧠 Learning Objectives
 
 ### RSC Optimization
-- Eliminate client-side `useEffect` and `TansStack query` data fetching
+- Eliminate client-side `useEffect` and `TanStack Query` data fetching
 - Prefer async **Server Components**
 
 ### Payload Reduction
