@@ -1,5 +1,6 @@
 import { ActiveOrderCard } from '@/features/driver/components/ActiveOrderCard'
 import { AvailableDeliveries } from '@/features/driver/components/AvailableDeliveries'
+import { Offline } from '@/features/driver/components/Offline'
 import { Switch } from '@/shared/components/ui/switch'
 
 const page = () => {
@@ -12,8 +13,9 @@ const page = () => {
                     <Switch />
                 </div>
             </div>
-            <ActiveOrderCard />
-            <AvailableDeliveries />
+            <Offline />
+            {/* <ActiveOrderCard />
+            <AvailableDeliveries /> */}
         </div>
     )
 }
