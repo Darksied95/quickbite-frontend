@@ -3,7 +3,7 @@ import { cn } from "@/shared/lib/utils"
 import { ChevronDown, CircleAlert, Filter, Search } from "lucide-react"
 import Link from "next/link"
 
-const page = async ({ searchParams }: PageProps<"/driver/delivery">) => {
+const page = async ({ searchParams }: PageProps<"/driver/deliveries">) => {
     const status = (await searchParams).status || "active"
     const links = [{ link: "active", text: "Active Delivery" }, { link: "completed", text: "Completed" }, { link: "all", text: "All Deliveries" }]
 
@@ -44,7 +44,7 @@ const page = async ({ searchParams }: PageProps<"/driver/delivery">) => {
                 }
             </nav>
             <DeliveryCard>
-                <button className="bg-green-600 text-white font-medium rounded-md py-1 hover:bg-green-700">Complete Delivery</button>
+                <button className="bg-green-600 text-white font-medium rounded-md py-1 hover:bg-green-700 px-3 text-sm">Complete Delivery</button>
             </DeliveryCard>
         </div>
     )
