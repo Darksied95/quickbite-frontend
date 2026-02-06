@@ -1,3 +1,6 @@
+import { LinkProps } from "@/shared/components/Navigations"
+import { Bell, Truck, User, Lock } from "lucide-react"
+
 export const deliveryNotifications = {
     heading: "Delivery Notifications",
     lists: [
@@ -29,3 +32,27 @@ export const earningsNotifications = {
         }
     ]
 }
+
+export const SETTINGLINKS: Array<LinkProps> = [
+    {
+        name: 'Personal Information',
+        href: '/driver/settings/profile',
+        Icon: "user"
+    },
+    {
+        name: "Vehicle Details",
+        href: '/driver/settings/vehicle',
+        Icon: "truck"
+    },
+    {
+        name: "Notifications",
+        href: '/driver/settings/notifications',
+        Icon: "bell"
+    },
+    {
+        name: "Security",
+        href: '/driver/settings/security',
+        Icon: "lock"
+    }
+
+]

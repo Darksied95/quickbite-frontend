@@ -1,4 +1,4 @@
-import { Navigations } from "@/features/restaurant/components/Navigations"
+import { Navigations } from "@/shared/components/Navigations"
 
 const page = () => {
     return (

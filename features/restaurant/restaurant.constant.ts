@@ -1,6 +1,6 @@
-import { IconName } from "@/shared/components/SideMenu";
+import { LinkProps } from "@/shared/components/Navigations";
 
-export const sideMenuLinks: Array<{ name: string, href: string, icon: IconName }> = [
+export const sideMenuLinks: Array<{ name: string, href: string, icon: string }> = [
     {
         name: "Dashboard",
         href: "/restaurant",
@@ -21,6 +21,30 @@ export const sideMenuLinks: Array<{ name: string, href: string, icon: IconName }
         href: "/restaurant/settings",
         icon: "settings",
     },
+]
+
+export const SETTINGLINKS: Array<LinkProps> = [
+    {
+        name: 'Restaurant Profile',
+        href: '/restaurant/settings/profile',
+        Icon: "user"
+    },
+    {
+        name: "Location  & Hours",
+        href: '/restaurant/settings/location',
+        Icon: "mapPin"
+    },
+    {
+        name: "Notifications",
+        href: '/restaurant/settings/notifications',
+        Icon: "bell"
+    },
+    {
+        name: "Security",
+        href: '/restaurant/settings/security',
+        Icon: "lock"
+    }
+
 ]
 
 export const OrderNotifications = {

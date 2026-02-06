@@ -13,7 +13,7 @@ export const Notification = ({ heading, lists }: Props) => {
                     lists.map((item) => {
                         return (
                             <li key={item.title} className="grid grid-cols-[auto_1fr] gap-x-3 mb-4">
-                                <input type="checkbox" id={item.title} name={item.title} checked />
+                                <input type="checkbox" id={item.title} name={item.title} checked readOnly />
                                 <label htmlFor={item.title} className="font-medium text-sm">{item.title}</label>
                                 <p className="col-start-2 text-gray-700 text-sm font-light">{item.description}</p>
                             </li>
