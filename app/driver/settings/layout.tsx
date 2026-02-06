@@ -1,4 +1,4 @@
-import { SETTINGLINKS } from '@/features/restaurant/restaurant.constant'
+import { SETTINGLINKS } from '@/features/driver/driver.constant'
 import { Navigations } from '@/shared/components/Navigations'
 import React from 'react'
 
