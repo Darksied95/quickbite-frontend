@@ -1,6 +1,6 @@
 import { ActiveDeliveryAlert } from "@/features/driver/components/ActiveDeliveryAlert"
 import { DeliveryCard } from "@/features/driver/components/DeliveryCard"
-import { DeliveryFilter } from "@/features/driver/components/DeliveryFilter"
+import { TimelineFilter } from "@/features/driver/components/TimelineFilter"
 import { NavBar } from "@/shared/components/NavBar"
 import { SearchInput } from "@/shared/components/Search"
 
@@ -13,8 +13,9 @@ const page = async ({ searchParams }: PageProps<"/driver/deliveries">) => {
     return (
         <div>
             <h2 className="text-xl font-semibold mb-3 md:my-5 md:text-2xl">My Deliveries</h2>
+
             <div>
-                <DeliveryFilter />
+                <TimelineFilter />
                 <SearchInput />
             </div>
 

@@ -1,20 +1,21 @@
 "use client"
 
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/shared/components/ui/select'
-import { ChevronDown, Filter } from 'lucide-react'
+import { cn } from '@/shared/lib/utils';
+import { Calendar, ChevronDown } from 'lucide-react'
 import { useState } from 'react';
 
-export const DeliveryFilter = () => {
-    const [filter, setFilter] = useState<undefined | string>();
+export const TimelineFilter = ({ className }: { className?: string }) => {
+    const [filter, setFilter] = useState<string>("week");
     const [open, setOpen] = useState(false);
 
     return (
         <Select value={filter} onValueChange={setFilter} onOpenChange={setOpen} open={open}>
 
-            <SelectTrigger className="[&>svg]:hidden border border-gray-300 w-full py-1 rounded-md placeholder:text-sm" >
-                <div className="flex w-full rounded-md justify-center items-center gap-x-2 text-gray-700 text-sm py-1">
-                    <Filter size={16} />
-                    <SelectValue placeholder="Filter" />
+            <SelectTrigger className={cn("[&>svg]:hidden border border-gray-300 w-full py-1 text-gray-700  text-sm rounded-md placeholder:text-sm", className)}>
+                <div className="flex w-full rounded-md justify-center items-center gap-x-2   py-1">
+                    <Calendar size={16} />
+                    <SelectValue />
                     <ChevronDown
                         size={16}
                         className={`transition-transform duration-200 ${open ? 'rotate-180' : 'rotate-0'}`}
