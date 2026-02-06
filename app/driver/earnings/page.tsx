@@ -1,7 +1,7 @@
-import { EarningCard } from '@/features/driver/components/EarningCard'
-import { EarningChart } from '@/features/driver/components/EarningChart'
-import { EarningList } from '@/features/driver/components/EarningList'
-import { EarningTable } from '@/features/driver/components/EarningTable'
+import { EarningCard } from '@/features/driver/components/earnings/EarningCard'
+import { EarningChart } from '@/features/driver/components/earnings/EarningChart'
+import { EarningList } from '@/features/driver/components/earnings/EarningList'
+import { EarningTable } from '@/features/driver/components/earnings/EarningTable'
 import { TimelineFilter } from '@/features/driver/components/TimelineFilter'
 
 const page = () => {
