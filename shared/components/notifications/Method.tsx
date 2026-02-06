@@ -1,4 +1,4 @@
-export const NotificationsMethods = () => {
+export const NotificationMethods = () => {
     return (
         <div className="mt-8">
             <h3 className="text-sm font-medium my-3">Notifications Methods</h3>
