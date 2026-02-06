@@ -1,6 +1,6 @@
 import { AccountAccess } from "@/features/restaurant/components/AccountAccess"
-import { ChangePassword } from "@/features/restaurant/components/ChangePassword"
-import { DeleteAccount } from "@/features/restaurant/components/DeleteAccount"
+import { ChangePassword } from "@/shared/components/security/ChangePassword"
+import { DeleteAccount } from "@/shared/components/security/DeleteAccount"
 
 const page = () => {
     return (
@@ -9,7 +9,10 @@ const page = () => {
             <p className='text-gray-600 text-sm font-light mb-5'>Manage your restaurant's security settings and password.</p>
             <ChangePassword />
             <AccountAccess />
-            <DeleteAccount />
+            <DeleteAccount
+                description="Permanently delete your restaurant account and all of your data."
+                actionLabel="Delete Restaurant Account"
+            />
         </div>
     )
 }
