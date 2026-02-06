@@ -1,5 +1,5 @@
 import { ActiveOrderCard } from '@/features/driver/components/ActiveOrderCard'
-import { AvailableDeliveries } from '@/features/driver/components/AvailableDeliveries'
+import { AvailableDeliveries } from '@/features/driver/components/deliveries/AvailableDeliveries'
 import { Offline } from '@/features/driver/components/Offline'
 import { Switch } from '@/shared/components/ui/switch'
 
