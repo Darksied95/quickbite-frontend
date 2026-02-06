@@ -1,4 +1,4 @@
-import { AvailableDeliveryCard } from './AvailableDeliveryCard'
+import { AvailableDeliveryCard } from '../deliveries/AvailableDeliveryCard'
 
 export const AvailableDeliveries = () => {
     return (

@@ -1,5 +1,5 @@
-import { ActiveDeliveryAlert } from "@/features/driver/components/ActiveDeliveryAlert"
-import { DeliveryCard } from "@/features/driver/components/DeliveryCard"
+import { ActiveDeliveryAlert } from "@/features/driver/components/deliveries/ActiveDeliveryAlert"
+import { DeliveryCard } from "@/features/driver/components/deliveries/DeliveryCard"
 import { TimelineFilter } from "@/features/driver/components/TimelineFilter"
 import { NavBar } from "@/shared/components/NavBar"
 import { SearchInput } from "@/shared/components/Search"
