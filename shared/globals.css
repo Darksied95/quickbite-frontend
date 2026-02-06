@@ -7,7 +7,7 @@
   --color-brand-primary: #16a34a;
   --color-brand-secondary: #22C55E;
   --grid-cols-auto-fit-200: repeat(auto-fit, minmax(200px, 1fr));
-  --grid-cols-auto-fit-400: repeat(auto-fit, minmax(400px, 1fr))
+  --grid-cols-auto-fit-300: repeat(auto-fit, minmax(300px, 1fr))
 }
 
 .debug {

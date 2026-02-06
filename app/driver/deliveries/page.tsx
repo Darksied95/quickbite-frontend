@@ -16,7 +16,7 @@ const page = async ({ searchParams }: PageProps<"/driver/deliveries">) => {
 
             <div>
                 <TimelineFilter />
-                <SearchInput />
+                <SearchInput placeholder="Search deliveries..." />
             </div>
 
             <ActiveDeliveryAlert />

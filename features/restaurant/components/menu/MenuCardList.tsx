@@ -20,7 +20,7 @@ export const MenuCardList = () => {
 
             <DeleteMenuDialog isOpen={!!deletingItem} onClose={() => setDeletingItem(null)} itemName={deletingItem} />
 
-            <ul className=' space-y-6 py-5 grid grid-cols-(--grid-cols-auto-fit-400) gap-x-5'>
+            <ul className=' space-y-6 py-5 grid grid-cols-(--grid-cols-auto-fit-300) gap-x-5'>
                 {
                     initialMenuItems.map((item) => (
                         <MenuCard
