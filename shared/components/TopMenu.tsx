@@ -3,10 +3,15 @@ import { LogOut, MenuIcon, X } from "lucide-react"
 import { Action } from "./Action"
 import { Logo } from "./Logo"
 import { SideMenu } from "./SideMenu"
-import { sideMenuLinks } from "@/features/restaurant/restaurant.constant"
 import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from "./ui/sheet"
+import { IconKeys } from "../lib/iconMapper"
 
-export const TopMenu = ({ name }: { name: string }) => {
+
+type Props = {
+    name: string
+    sideMenuLinks: Array<{ name: string, href: string, icon: IconKeys }>
+}
+export const TopMenu: React.FC<Props> = ({ name, sideMenuLinks }) => {
     return (
         <>
             <div className="bg-white flex items-center py-2 lg:py-4 px-4">

@@ -1,4 +1,5 @@
 import { LinkProps } from "@/shared/components/Navigations"
+import { IconKeys } from "@/shared/lib/iconMapper"
 import { Bell, Truck, User, Lock } from "lucide-react"
 
 export const deliveryNotifications = {
@@ -55,4 +56,28 @@ export const SETTINGLINKS: Array<LinkProps> = [
         Icon: "lock"
     }
 
+]
+
+export const sideMenuLinks: Array<{ name: string, href: string, icon: IconKeys }> = [
+    {
+        name: "Dashboard",
+        href: "/driver",
+        icon: "home",
+    },
+    {
+        name: "My Deliveries",
+        href: "/driver/deliveries",
+        icon: "truck",
+    },
+
+    {
+        name: "Earnings",
+        href: "/driver/earnings",
+        icon: "chart-line",
+    },
+    {
+        name: "Settings",
+        href: "/restaurant/settings",
+        icon: "settings",
+    },
 ]

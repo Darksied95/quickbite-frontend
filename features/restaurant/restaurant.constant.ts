@@ -1,6 +1,7 @@
 import { LinkProps } from "@/shared/components/Navigations";
+import { IconKeys } from "@/shared/lib/iconMapper";
 
-export const sideMenuLinks: Array<{ name: string, href: string, icon: string }> = [
+export const sideMenuLinks: Array<{ name: string, href: string, icon: IconKeys }> = [
     {
         name: "Dashboard",
         href: "/restaurant",

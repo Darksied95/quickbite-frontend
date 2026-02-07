@@ -27,7 +27,6 @@ export default function RootLayout({
         className={`${inter.variable}  antialiased bg-gray-100`}
       >
         <ToastContainer />
-        <TopMenu name="Rajah" />
         <QueryProvider>
           <main className="px-5">
             {children}

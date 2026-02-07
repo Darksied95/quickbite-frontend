@@ -8,8 +8,10 @@ const iconMap = {
     truck: Icons.Truck,
     home: Icons.Home,
     settings: Icons.Settings,
+    "layers": Icons.Layers,
     "shopping-bag": Icons.ShoppingBag,
     "shopping-cart": Icons.ShoppingCart,
+    "chart-line": Icons.ChartLine,
 }
 
 
